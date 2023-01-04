@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcf5eb;
+}
+nav{
+    padding: 30px 50px 100px 50px;
+}
+/* COMMON CSS STARTS */
+.container{
+    width: 1080px;
+    margin:auto ;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.download_button{
+    background-color: #25d366 ;
+    padding: 16px 28px;
+    color: #1c1e21;
+    border: 1px solid #1c1e21;
+    border-radius: 50px;
+    font-size: 16px;
+    z-index: 1;
+    overflow: hidden;
+}
+.download_button::after{
+    background-color: #1c1e21 !important;
+    height:80px !important;
+    width: 100% !important;
+    bottom: auto ;
+    top: 100% ;
+    border-radius: 50%;
+    position: absolute;
+    transition: 500ms !important;
+    z-index: -1;
+}
+.download_button:hover{
+    color: #fcf5eb;
+}
+.download_button:hover::after{
+    top: 0;
+    transform: scale(1.5);
+}
+/* COMMON CSS ENDS */
+nav .logo img{
+    width: 120px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav .logo,
+nav .menu,
+nav .download_button_grp{
+    width: 33.33%;
+}
+nav .menu ul li,
+nav .download_button_grp ul li{
+    display: inline-block;
+}
+nav .menu ul li a,
+nav .download_button_grp ul li a{
+    color: #1c1e21;
+    
+    line-height: 25px;
+    font-size: 18px;
+    margin: 0px 10px;
+    display: block;
+    position: relative;
+}
+nav .menu ul li a::after ,
+nav .download_button_grp ul li a::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #25d366;
+    transition: 0.39s;
+}
+nav .menu ul li:hover a::after,
+nav .download_button_grp ul li:hover a::after{
+    width: 100%;
+}
+nav .download_button_grp{
+   text-align: center;
+}
+nav .download_button_grp ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
